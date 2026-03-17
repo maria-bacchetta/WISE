@@ -1,0 +1,285 @@
+/* --- Global Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fcfaf7;
+    /* Off-white background from your logo */
+    color: #1a3c5a;
+    /* Deep blue from logo */
+    line-height: 1.6;
+}
+
+/* --- Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #1a3c5a;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1a3c5a;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b19cd9;
+    /* Lavender from logo */
+}
+
+/* --- Hero Section --- */
+/* .hero {
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(26, 60, 90, 0.9), rgba(177, 156, 217, 0.7)),
+        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+} */
+
+.hero-text h2 {
+    font-family: poppins;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+   
+}
+
+.hero-text p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    font-family: 'Miniver', poppins;
+}
+
+.hero-text button {
+    padding: 15px 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #b19cd9;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-text button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(177, 156, 217, 0.4);
+    background-color: #a084d6;
+}
+
+.hero {
+        height: 80vh;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        /* text left */
+        align-items: center;
+        padding-left: 8%;
+        color: white;
+        overflow: hidden;
+    }
+
+
+/* .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% left;
+    z-index: -1;
+} */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140%;
+    /* thoda zoom */
+    height: 100%;
+    object-fit: cover;
+
+    /* ye control karta hai video ka kaunsa part dikhega */
+    object-position: 100% center;
+
+    z-index: -1;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 60, 90, 0.8), rgba(177, 156, 217, 0.6));
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Features Section --- */
+.special {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.special h2 {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    border-bottom: 4px solid #b19cd9;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature h3 {
+    margin: 20px 0 15px;
+    color: #1a3c5a;
+}
+
+/* --- Theme Section --- */
+.theme {
+    background-color: #1a3c5a;
+    color: white;
+    padding: 60px 15%;
+    text-align: center;
+    border-radius: 50px;
+    margin: 40px 5%;
+}
+
+.theme h2 {
+    margin-bottom: 20px;
+    color: #b19cd9;
+}
+
+/* --- Team/Advisors/Board Section --- */
+.advisors,
+.board {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.member {
+    width: 200px;
+    text-align: center;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #b19cd9;
+    margin-bottom: 15px;
+}
+
+.member h3 {
+    font-size: 1.1rem;
+    color: #1a3c5a;
+}
+
+.member p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #eef2f5;
+    margin-top: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+}
