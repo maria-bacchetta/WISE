@@ -14,7 +14,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style1.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -49,11 +50,11 @@
         </video>
 
         <div class="hero-text">
-
-            <h2>Women in<br>Science & Engineering</h2>
-
-            <p>Empowering women to innovate, lead, and succeed in STEM.</p>
-
+            <h2 class="hero-title">
+            <span class="drop-cap">W</span>omen in<br>
+            Science & Engineering
+            </h2>
+            <p class="hero-subtitle cursive-font">Empowering women to innovate, lead, and succeed in STEM.</p>
             <button>Join WISE</button>
 
         </div>
@@ -63,68 +64,108 @@
 
     <!-- ABOUT -->
 
-    <section id="about" class="about">
+<section id="about" class="about">
+    <div class="about-container">
+        <div class="about-card">
+            <h2 class="about-title">
+                About <span class="w-letter">W</span><span class="ise-letters">ISE</span>
+            </h2>
+            <div class="underline"></div>
+            <p class="about-text">
+                Women in Science and Engineering (WISE) is a student organization at Indiana Tech dedicated to
+                supporting and empowering women pursuing careers in STEM. Through mentorship, collaborative
+                projects, workshops, and networking opportunities, WISE creates a welcoming community.
+            </p>
+        </div>
+    </div>
+</section>
 
-        <h2>About WISE</h2>
-
-        <p class="about-text">
-
-            Women in Science and Engineering (WISE) is a student organization at Indiana Tech dedicated to
-            supporting and empowering women pursuing careers in STEM. Through mentorship, collaborative
-            projects, workshops, and networking opportunities, WISE creates a welcoming community where
-            students can explore innovation, leadership, and professional growth in science and technology.
-
-        </p>
-
-        <div class="features">
-
-            <div class="feature">
-                <h3>Supportive Community</h3>
-                <p>A welcoming environment where women support and inspire each other.</p>
+<section id="events" class="events-section">
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="month-selector">
+                <div id="currentMonthDisplay" class="month-btn" onclick="toggleMonthList()">
+                    March 2026 <span>⌄</span>
+                </div>
+                <div id="monthList" class="month-dropdown-content">
+                    <div onclick="selectMonth(0, 2026)">January 2026</div>
+                    <div onclick="selectMonth(1, 2026)">February 2026</div>
+                    <div onclick="selectMonth(2, 2026)">March 2026</div>
+                    <div onclick="selectMonth(3, 2026)">April 2026</div>
+                    <div onclick="selectMonth(4, 2026)">May 2026</div>
+                    <div onclick="selectMonth(5, 2026)">June 2026</div>
+                    <div onclick="selectMonth(6, 2026)">July 2026</div>
+                    <div onclick="selectMonth(7, 2026)">August 2026</div>
+                    <div onclick="selectMonth(8, 2026)">September 2026</div>
+                    <div onclick="selectMonth(9, 2026)">October 2026</div>
+                    <div onclick="selectMonth(10, 2026)">November 2026</div>
+                    <div onclick="selectMonth(11, 2026)">December 2026</div>
+                </div>
             </div>
-
-            <div class="feature">
-                <h3>Innovation</h3>
-                <p>Hands-on workshops, projects, and hackathons exploring new ideas.</p>
-            </div>
-
-            <div class="feature">
-                <h3>Mentorship</h3>
-                <p>Guidance from faculty and professionals in STEM industries.</p>
-            </div>
-
+            <h2 class="calendar-main-title"><span class="w-letter">O</span>UR EVENTS</h2>
+            <div style="width: 150px;"></div>
         </div>
 
-    </section>
+        <div class="calendar-grid">
+            <div class="day-name">Sun</div>
+            <div class="day-name">Mon</div>
+            <div class="day-name">Tue</div>
+            <div class="day-name">Wed</div>
+            <div class="day-name">Thu</div>
+            <div class="day-name">Fri</div>
+            <div class="day-name">Sat</div>
 
+            <div class="date-cell"></div>
+            <div class="date-cell">1</div>
+            <div class="date-cell">2</div>
+            <div class="date-cell">3</div>
+            <div class="date-cell">4</div>
+            <div class="date-cell">5</div>
+            <div class="date-cell">6</div>
+            <div class="date-cell">7</div>
+            <div class="date-cell">8</div>
+            <div class="date-cell">9</div>
+            <div class="date-cell">10</div>
+            <div class="date-cell">11</div>
+            <div class="date-cell">12</div>
+            <div class="date-cell">13</div>
+            <div class="date-cell">14</div>
+            <div class="date-cell">15</div>
+            <div class="date-cell">16</div>
+            <div class="date-cell">17</div>
+            <div class="date-cell">18</div>
 
-    <!-- EVENTS -->
-
-    <section id="events" class="events">
-
-        <h2>WISE Events</h2>
-
-        <div class="features">
-
-            <div class="feature">
-                <h3>STEM Workshops</h3>
-                <p>Technical workshops helping members learn new tools and skills.</p>
+            <div class="date-cell has-event" onclick="showEventDetails()">
+                19
+                <div class="event-pill">Monthly Event</div>
             </div>
 
-            <div class="feature">
-                <h3>Guest Speaker Talks</h3>
-                <p>Industry professionals share experiences and career insights.</p>
-            </div>
-
-            <div class="feature">
-                <h3>Hackathons</h3>
-                <p>Collaborative coding and innovation events for creative problem solving.</p>
-            </div>
-
+            <div class="date-cell">20</div>
+            <div class="date-cell">21</div>
+            <div class="date-cell">22</div>
+            <div class="date-cell">23</div>
+            <div class="date-cell">24</div>
+            <div class="date-cell">25</div>
+            <div class="date-cell">26</div>
+            <div class="date-cell">27</div>
+            <div class="date-cell">28</div>
+            <div class="date-cell">29</div>
+            <div class="date-cell">30</div>
+            <div class="date-cell">31</div>
         </div>
+    </div>
 
-    </section>
-
+    <div id="eventModal" class="event-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEventDetails()">&times;</span>
+            <span class="tag">Monthly</span>
+            <h3>Theme-WISE Event</h3>
+            <p><strong>Time:</strong> 19 Mar 2026, 11:00 am</p>
+            <p><strong>Location:</strong> Snyder Academic Center, Room 242</p>
+            <button class="hero-button-small">Details</button>
+        </div>
+    </div>
+</section>
 
     <!-- ADVISORS -->
 
@@ -199,7 +240,7 @@
         <p>© 2026 Women in Science and Engineering | Indiana Tech</p>
 
     </footer>
-
+<script src="script1.js"></script>
 </body>
 
 </html>

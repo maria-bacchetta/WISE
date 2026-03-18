@@ -6,28 +6,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: #fcfaf7;
-    /* Off-white background from your logo */
     color: #1a3c5a;
-    /* Deep blue from logo */
     line-height: 1.6;
 }
 
-/* --- Navigation --- */
+/*Nav Bar*/
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 10%;
-    background: rgba(255, 255, 255, 0.8);
+    padding: 0 8%;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    height: 100px;
+    /* Bada navbar size */
 }
 
 .logo {
@@ -37,121 +39,64 @@ header {
 }
 
 .logo img {
-    height: 50px;
-    border-radius: 50%;
+    height: 70px;
+    /* Logo bada kar diya */
+    width: auto;
 }
 
 .logo h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: #1a3c5a;
     letter-spacing: 2px;
+    font-weight: 700;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #1a3c5a;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.2rem;
+    /* Links bade dikhenge */
     transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: #b19cd9;
-    /* Lavender from logo */
 }
 
-/* --- Hero Section --- */
-/* .hero {
-    height: 80vh;
-    background: linear-gradient(135deg, rgba(26, 60, 90, 0.9), rgba(177, 156, 217, 0.7)),
-        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 0 20px;
-} */
-
-.hero-text h2 {
-    font-family: poppins;
-    font-size: 4.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-   
-}
-
-.hero-text p {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    font-family: 'Miniver', poppins;
-}
-
-.hero-text button {
-    padding: 15px 40px;
-    font-size: 2rem;
-    font-weight: 600;
-    background-color: #b19cd9;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero-text button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(177, 156, 217, 0.4);
-    background-color: #a084d6;
-}
-
+/*Hero Section- dont touch video settings :)*/
 .hero {
-        height: 80vh;
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        /* text left */
-        align-items: center;
-        padding-left: 8%;
-        color: white;
-        overflow: hidden;
-    }
-
-
-/* .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 100vh;
+    /* Full screen height */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% left;
-    z-index: -1;
-} */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8%;
+    color: white;
+    overflow: hidden;
+}
+
 .hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 140%;
-    /* thoda zoom */
+    /* Purana zoom level */
     height: 100%;
     object-fit: cover;
-
-    /* ye control karta hai video ka kaunsa part dikhega */
+    /* Isse video ka logo right side pe hi rahega */
     object-position: 100% center;
-
     z-index: -1;
+    opacity: 0.7;
 }
-
 
 .hero::after {
     content: "";
@@ -160,126 +105,300 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 60, 90, 0.8), rgba(177, 156, 217, 0.6));
+    background: linear-gradient(90deg, rgba(26, 60, 90, 0.5) 0%, rgba(26, 60, 90, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
 }
 
-.hero-content {
-    position: relative;
+.hero-text {
     z-index: 2;
+    max-width: 600px;
+    text-align: left;
 }
 
-/* --- Features Section --- */
-.special {
-    padding: 80px 10%;
+/* giving id to W to change its font and being a bit creative */
+.drop-cap {
+    font-family: 'Dancing Script', cursive;
+    font-size: 9rem;
+    color: #b19cd9;
+    text-transform: none;
+    margin-right: -10px;
+}
+
+.hero-subtitle.cursive-font {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #fcfaf7;
+    margin-bottom: 35px;
+    max-width: 600px;
+    text-transform: none;
+    line-height: 1.2;
+}
+
+.hero-text h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #1a3c5a;;
+}
+
+/* button styling and animations */
+.hero button {
+    padding: 18px 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    /* Text color */
+    background-color: #b19cd9;
+    /* Base color: Purple */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* blue layer behind*/
+.hero button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+/* on outside left of button  */
+    width: 100%;
+    height: 100%;
+    background-color: #1a3c5a;
+    /* Hover color: Blue */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* effect that was on another site - done */
+    z-index: -1;
+}
+
+/* Hover effect, blue layer comes in left to right*/
+.hero button:hover::after {
+    left: 0;
+}
+
+.hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(26, 60, 90, 0.3);
+}
+
+/* --- Section Padding --- */
+section {
+    padding: 120px 10% 80px;
+    /* Navbar fixed, just increased top padding */
+}
+
+
+/* --- About Section (Centered Card) --- */
+.about {
+    background: linear-gradient(180deg, #fcfaf7 0%, #f3effa 100%);
+    padding: 150px 10% 120px;
+    /* Padding badha di taaki ye section stand out kare */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    /* Screen pe acchi jagah lega */
+}
+
+.about-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.about-card {
+    background: white;
+    padding: 80px 60px;
+    /* Andar ki space badha di premium feel ke liye */
+    border-radius: 50px;
+    /* Extra rounded corners */
+    box-shadow: 0 25px 60px rgba(177, 156, 217, 0.15);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+/* Halka sa hover effect card pe */
+.about-card:hover {
+    transform: scale(1.02);
+}
+
+/* About Section Styling */
+
+/* --- About Section Title Styling --- */
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Only 'W'purple color */
+.w-letter {
+    color: #b19cd9;
+    /* Lavender/Purple */
+}
+
+/* 'ISE'  deep blue color */
+.ise-letters {
+    color: #1a3c5a;
+    /* Deep Blue */
+}
+
+/* About card styling */
+.about-card {
+    background: white;
+    padding: 80px 60px;
+    border-radius: 50px;
+    box-shadow: 0 25px 60px rgba(177, 156, 217, 0.15);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.about-text {
+    font-size: 1.4rem;
+    color: #4a5568;
+    line-height: 2;
     text-align: center;
 }
 
-.special h2 {
-    margin-bottom: 50px;
-    font-size: 2.5rem;
+/* events section style */
+.events-section {
+    background: #11081d !important;
+    padding: 100px 5% !important;
+    min-height: 120vh !important;
+    color: white !important;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.calendar-main-title {
+    font-size: 3rem !important;
+    letter-spacing: 10px;
+    color: white !important;
+}
+
+/* Dropdown styling */
+.month-selector {
     position: relative;
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.feature {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: 0.3s;
-    border-bottom: 4px solid #b19cd9;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-}
-
-.feature h3 {
-    margin: 20px 0 15px;
-    color: #1a3c5a;
-}
-
-/* --- Theme Section --- */
-.theme {
-    background-color: #1a3c5a;
-    color: white;
-    padding: 60px 15%;
-    text-align: center;
+.month-btn {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
     border-radius: 50px;
-    margin: 40px 5%;
+    cursor: pointer;
+    border: 1px solid #b19cd9;
 }
 
-.theme h2 {
-    margin-bottom: 20px;
-    color: #b19cd9;
+.month-dropdown-content {
+    display: none;
+    position: absolute;
+    background: #2a1b3d;
+    min-width: 200px;
+    z-index: 9999;
+    border-radius: 10px;
+    border: 1px solid #b19cd9;
 }
 
-/* --- Team/Advisors/Board Section --- */
-.advisors,
-.board {
-    padding: 60px 10%;
-    text-align: center;
+.month-dropdown-content div {
+    padding: 10px;
+    cursor: pointer;
 }
 
+.month-dropdown-content div:hover {
+    background: #b19cd9;
+    color: #11081d;
+}
+
+/* Grid Look */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(177, 156, 217, 0.2);
+    border-radius: 20px;
+}
+
+.date-cell {
+    min-height: 150px;
+    /* Bada size */
+    border: 0.5px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.has-event {
+    background: rgba(177, 156, 217, 0.15) !important;
+    border: 1px solid #b19cd9 !important;
+    cursor: pointer;
+}
+
+.event-pill {
+    background: #b19cd9;
+    color: #11081d;
+    font-size: 0.7rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Modal */
+.event-modal {
+    display: none;
+    /* Default hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    color: black;
+    width: 350px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
 .team {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.member {
-    width: 200px;
-    text-align: center;
+    gap: 50px;
 }
 
 .member img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     border: 5px solid #b19cd9;
-    margin-bottom: 15px;
-}
-
-.member h3 {
-    font-size: 1.1rem;
-    color: #1a3c5a;
-}
-
-.member p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* --- Footer --- */
-footer {
-    padding: 40px;
-    text-align: center;
-    background: #eef2f5;
-    margin-top: 60px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 5%;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .hero-text h2 {
-        font-size: 2.2rem;
-    }
-
-    nav ul {
-        gap: 15px;
-    }
+    object-fit: cover;
 }
